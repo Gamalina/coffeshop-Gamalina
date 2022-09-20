@@ -9,6 +9,7 @@ namespace MSTestCoffeeShop
         public void PriceTest()
         {
 
+
         }
         // Equal to the correct price.
         [DataTestMethod]
