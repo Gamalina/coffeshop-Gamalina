@@ -8,7 +8,6 @@ namespace MSTestCoffeeShop
         [TestMethod]
         public void PriceTest()
         {
-            Assert.Fail();
         }
         // Equal to the correct price.
         [DataTestMethod]
@@ -216,10 +215,8 @@ namespace MSTestCoffeeShop
         [DataRow(20)]
         [DataRow(15)]
         [DataRow(10)]
-        [DataRow(5)]
-        [DataRow(3)]
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void Latte_DiscountPrice_GreaterThan_5(int value)
         {
             // Arrange
@@ -227,6 +224,7 @@ namespace MSTestCoffeeShop
             // Act
             int price = latte.Price();
             // Assert
+            
             Assert.AreEqual(40, price);
         }
 
