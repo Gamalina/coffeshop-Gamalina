@@ -12,7 +12,7 @@ namespace MSTestCoffeeShop
 
         }
         // Equal to the correct price.
-        [DataTestMethod]
+        
         [DataRow(40)]
         [TestMethod]
         public void Latte_Price_AreEqual_40(int value)
@@ -211,9 +211,7 @@ namespace MSTestCoffeeShop
             Assert.AreEqual(value, coffeType);
         }
 
-        // Question here. Is it correct that the test has to fail for the assignment?
-        // Throw Expection if discount is > 5
-        [DataTestMethod]
+        // GreaterThan value
         [DataRow(20)]
         [DataRow(15)]
         [DataRow(10)]
